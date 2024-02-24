@@ -1,0 +1,111 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: black;
+    padding-top: 20px;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+
+    .button {
+        position: relative;
+    }
+
+    .dots-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        margin-left: 5px;
+        visibility: hidden;
+        /* Изначально делаем точки невидимыми */
+        transition: visibility 0.3s ease;
+        /* Добавляем плавное появление */
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        margin: 5px;
+    }
+
+    .logo-image {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+        visibility: hidden;
+        /* Изначально делаем логотип невидимым */
+        transition: visibility 0.3s ease;
+        /* Добавляем плавное появление */
+    }
+
+    .sidebar-title,
+    .route-title {
+        font-family: Arial, sans-serif;
+        border-radius: 15px;
+        padding: 5px 10px;
+        opacity: 0;
+        /* Изначально делаем текст пунктов невидимым */
+        transition: opacity 0.3s ease;
+        /* Добавляем плавное появление */
+    }
+
+    .profile-section {
+        position: absolute;
+        bottom: 40px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile-section img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    div.route-item {
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    div.route-item:hover {
+        background-color: #525ae3;
+        border-radius: 10px;
+    }
+
+    
+
+    &.opened {
+        width: 200px;
+
+        .dots-container,
+        .logo-image,
+        .sidebar-title,
+        .route-title {
+            visibility: visible;
+            /* При раскрытии сайдбара делаем все элементы видимыми */
+            opacity: 1;
+            /* При раскрытии сайдбара делаем все элементы видимыми */
+        }
+    }
+
+    &.closed {
+        width: 60px;
+
+        .dots-container,
+        .logo-image {
+            visibility: visible;
+            /* При закрытии сайдбара делаем точки и логотип видимыми */
+        }
+    }
+}
