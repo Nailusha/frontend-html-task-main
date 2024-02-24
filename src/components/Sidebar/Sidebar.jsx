@@ -3,6 +3,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png'
+import profile from '../../assets/profile.png'
 
 const routes = [
     { title: 'Home', icon: 'fas-solid fa-house', path: '/' },
@@ -74,7 +75,7 @@ export default class Sidebar extends React.Component {
                 <div>
                     {
                         bottomRoutes.map((route) => (
-                            <div className="route-item" key={route.title} onClick={() => this.goToRoute(route.path)}>
+                            <div className="route-item_1" key={route.title} onClick={() => this.goToRoute(route.path)}>
                                 <FontAwesomeIcon icon={route.icon} />
                                 <span className={classnames('route-title', { hidden: !isOpened })}>{route.title}</span>
                             </div>
@@ -83,10 +84,11 @@ export default class Sidebar extends React.Component {
                 </div>
                 <div className="profile-section">
                     <img
+                        src={profile}
                         alt="Profile"
                         onClick={this.toggleMenu}
                     />
-                    {this.state.isMenuOpen }
+                    <span className={classnames('route-title', { hidden: !isOpened })}>Profile</span>
                 </div>
             </div>
         );
