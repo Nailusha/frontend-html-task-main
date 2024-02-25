@@ -8,41 +8,26 @@
     padding-top: 20px;
     border-radius: 10px;
     transition: width 0.5s ease,
-        /* Плавная анимация изменения ширины */
         opacity 0.5s ease-in-out;
-    /* Плавная анимация изменения прозрачности */
 
     .button {
         position: absolute;
-        /* Закрепляем кнопку абсолютно */
         top: 0;
         right: -40px;
-        /* Расстояние от правого края сайдбара */
         width: 40px;
-        /* Ширина кнопки */
         height: 40px;
-        /* Высота кнопки */
         background-color: #333;
-        /* Цвет кнопки */
         border: none;
-        /* Убираем границы */
         border-radius: 0 10px 10px 0;
-        /* Скругляем правый верхний и нижний углы */
         cursor: pointer;
-        /* Курсор при наведении */
         display: flex;
-        /* Размещаем содержимое по центру */
         justify-content: center;
-        /* Выравниваем содержимое по горизонтали */
         align-items: center;
-        /* Выравниваем содержимое по вертикали */
         transition: right 0.3s ease;
-        /* Плавное перемещение при изменении ширины сайдбара */
     }
 
     .button:hover {
         background-color: #555;
-        /* Цвет кнопки при наведении */
     }
 
     .dots-container {
@@ -51,9 +36,7 @@
         margin-bottom: 20px;
         margin-left: 5px;
         visibility: hidden;
-        /* Изначально делаем точки невидимыми */
         transition: visibility 0.1s ease;
-        /* Добавляем плавное появление */
     }
 
     .dot {
@@ -74,21 +57,18 @@
         &:nth-child(1) {
             &::before {
                 background-color: rgb(213, 0, 0);
-                /* Цвет первой точки */
             }
         }
 
         &:nth-child(2) {
             &::before {
                 background-color: rgb(222, 214, 0);
-                /* Цвет второй точки */
             }
         }
 
         &:nth-child(3) {
             &::before {
                 background-color: rgb(4, 206, 31);
-                /* Цвет третьей точки */
             }
         }
     }
@@ -98,9 +78,7 @@
         height: 30px;
         margin-left: 15px;
         visibility: hidden;
-        /* Изначально делаем логотип невидимым */
         transition: visibility 0.1s ease;
-        /* Добавляем плавное появление */
     }
 
     .sidebar-title,
@@ -109,9 +87,7 @@
         border-radius: 15px;
         padding: 5px 10px;
         opacity: 0;
-        /* Изначально делаем текст пунктов невидимым */
         transition: opacity 0.1s ease;
-        /* Добавляем плавное появление */
     }
 
     .profile-section {
@@ -161,9 +137,7 @@
         .sidebar-title,
         .route-title {
             visibility: visible;
-            /* При раскрытии сайдбара делаем все элементы видимыми */
             opacity: 1;
-            /* При раскрытии сайдбара делаем все элементы видимыми */
         }
     }
 
@@ -173,7 +147,6 @@
         .dots-container,
         .logo-image {
             visibility: visible;
-            /* При закрытии сайдбара делаем точки и логотип видимыми */
         }
     }
 }
